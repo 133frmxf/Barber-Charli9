@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Barbería Estilo Fino - Reserva tu cita</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #f1f1f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #1e1e1e;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        /* Espacio para logo */
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px auto;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .logo img {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #e0a800;
+            letter-spacing: 1.2px;
+        }
+        header p {
+            margin-top: 5px;
+            font-size: 1.1rem;
+            color: #c5a300;
+            font-weight: 500;
+        }
+        /* Imagen decorativa debajo del header */
+        .header-image {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 25px;
+            background-color: #333;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .header-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #d4af37;
+        }
+        form input[type="text"],
+        form input[type="tel"],
+        form input[type="date"],
+        form input[type="time"],
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 5px;
+            border: none;
+            background-color: #2e2e2e;
+            color: #f1f1f1;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
+        }
+        form input[type="text"]:focus,
+        form input[type="tel"]:focus,
+        form input[type="date"]:focus,
+        form input[type="time"]:focus,
+        form select:focus {
+            background-color: #444444;
+            outline: none;
+        }
+        form input[type="submit"] {
+            background-color: #e0a800;
+            color: #121212;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 25px;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        form input[type="submit"]:hover {
+            background-color: #c59500;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    body,td,th {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <!-- Aquí puedes poner el logo -->
+                <!-- Ejemplo: <img src="logo.png" alt="Logo Barbería"> -->
+              <div><span data-canva-clipboard="ewAiAGEAIgA6ADUALAAiAGgAIgA6ACIAdwB3AHcALgBjAGEAbgB2AGEALgBjAG8AbQAiACwAIgBjACIAOgAiAEQAQQBHAHEAQQBRAEcAMABJAFEANAAiACwAIgBpACIAOgAiAEkAQgA4AFoAMQBmAG8ATAA5AGYAeQAwAHQAQQBwAFAAegB1ADAAOABlAHcAIgAsACIAYgAiADoAMQA3ADQAOQA2ADAAMwA4ADQAMgA5ADcANgAsACIAagAiADoAWwB7ACIAQQAiADoAewAiAEsAIgA6AHsAfQAsACIARAAiADoAewB9ACwAIgBFACIAOgB7AH0ALAAiAFMAIgA6AHsAfQAsACIARgAiADoAewAiAEEAIgA6ACIASQBkAGUAbgB0AGkAdAB5AC4AcABuAGcAIgAsACIAQgAiADoAMQB9ACwAIgBHACIAOgB7AH0ALAAiAEgAIgA6AHsAIgBCACIAOgAiAG4AbwBuAGUAIgAsACIAQwAiADoAIgAjADAAMAAwADAAMAAwACIALAAiAEQAIgA6ACIAIwBmAGYAZgBmAGYAZgAiAH0ALAAiAEoAIgA6AHsAIgBGACIAOgAiACMAMAAwADAAMAAwADAAIgB9ACwAIgBQACIAOgB7AH0AfQB9AF0ALAAiAEEAPwAiADoAIgBCACIALAAiAEEAIgA6AFsAewAiAEEAIgA6ADIAMwAwAC4AMwA5ADkAOQA5ADkAOQA5ADkAOQA5ADkAOQA4ACwAIgBCACIAOgA1ADQAMwAuADkAMgAyADEAOAAxADgAMQA4ADEAOAAxADgALAAiAEQAIgA6ADIANwA4AC4AMQA1ADUANgAzADYAMwA2ADMANgAzADYANAAsACIAQwAiADoAMwAwADcALgAyADAAMAAwADAAMAAwADAAMAAwADAAMAAwADUALAAiAEEAPwAiADoAIgBJACIALAAiAGEAIgA6AHsAIgBBACIAOgBmAGEAbABzAGUALAAiAEIAIgA6AHsAIgBBACIAOgB7ACIAQQAiADoAIgBNAEEARgBLAHIAdABKAFIAYQBWAHMAIgAsACIAQgAiADoAMQB9ACwAIgBCACIAOgB7ACIARAAiADoAMgA3ADgALgAxADUANQA2ADMANgAzADYAMwA2ADMANgA0ACwAIgBDACIAOgAzADAANwAuADIAMAAwADAAMAAwADAAMAAwADAAMAAwADAANQB9AH0AfQB9AF0ALAAiAEIAIgA6ADEAMwA2ADYALAAiAEMAIgA6ADcANgA4AH0A"> </span></div>
+            </div>
+            <h1>Barber&nbsp; Charli</h1>
+            <p>Reserva tu cita fácilmente</p>
+        </header>
+
+        <div>
+            <!-- Imagen decorativa -->
+            <!-- Ejemplo: <img src="barberia.jpg" alt="Barbería"> -->
+          <div><span data-canva-clipboard="ewAiAGEAIgA6ADUALAAiAGgAIgA6ACIAdwB3AHcALgBjAGEAbgB2AGEALgBjAG8AbQAiACwAIgBjACIAOgAiAEQAQQBHAHEAQQBRAEcAMABJAFEANAAiACwAIgBpACIAOgAiAEkAQgA4AFoAMQBmAG8ATAA5AGYAeQAwAHQAQQBwAFAAegB1ADAAOABlAHcAIgAsACIAYgAiADoAMQA3ADQAOQA2ADAAMwA4ADQAMgA5ADcANgAsACIAagAiADoAWwB7ACIAQQAiADoAewAiAEsAIgA6AHsAfQAsACIARAAiADoAewB9ACwAIgBFACIAOgB7AH0ALAAiAFMAIgA6AHsAfQAsACIARgAiADoAewAiAEEAIgA6ACIASQBkAGUAbgB0AGkAdAB5AC4AcABuAGcAIgAsACIAQgAiADoAMQB9ACwAIgBHACIAOgB7AH0ALAAiAEgAIgA6AHsAIgBCACIAOgAiAG4AbwBuAGUAIgAsACIAQwAiADoAIgAjADAAMAAwADAAMAAwACIALAAiAEQAIgA6ACIAIwBmAGYAZgBmAGYAZgAiAH0ALAAiAEoAIgA6AHsAIgBGACIAOgAiACMAMAAwADAAMAAwADAAIgB9ACwAIgBQACIAOgB7AH0AfQB9AF0ALAAiAEEAPwAiADoAIgBCACIALAAiAEEAIgA6AFsAewAiAEEAIgA6ADIAMwAwAC4AMwA5ADkAOQA5ADkAOQA5ADkAOQA5ADkAOQA4ACwAIgBCACIAOgA1ADQAMwAuADkAMgAyADEAOAAxADgAMQA4ADEAOAAxADgALAAiAEQAIgA6ADIANwA4AC4AMQA1ADUANgAzADYAMwA2ADMANgAzADYANAAsACIAQwAiADoAMwAwADcALgAyADAAMAAwADAAMAAwADAAMAAwADAAMAAwADUALAAiAEEAPwAiADoAIgBJACIALAAiAGEAIgA6AHsAIgBBACIAOgBmAGEAbABzAGUALAAiAEIAIgA6AHsAIgBBACIAOgB7ACIAQQAiADoAIgBNAEEARgBLAHIAdABKAFIAYQBWAHMAIgAsACIAQgAiADoAMQB9ACwAIgBCACIAOgB7ACIARAAiADoAMgA3ADgALgAxADUANQA2ADMANgAzADYAMwA2ADMANgA0ACwAIgBDACIAOgAzADAANwAuADIAMAAwADAAMAAwADAAMAAwADAAMAAwADAANQB9AH0AfQB9AF0ALAAiAEIAIgA6ADEAMwA2ADYALAAiAEMAIgA6ADcANgA4AH0A"> </span></div>
+        </div>
+
+        <form action="../procesar_cita.php" method="POST">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required />
+
+            <label for="fecha">Fecha de la cita:</label>
+            <input type="date" id="fecha" name="fecha" required />
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required />
+
+            <label for="servicio">Servicio:</label>
+            <select id="servicio" name="servicio" required>
+                <option value="" disabled selected>Selecciona un servicio</option>
+                <option value="corte">Corte de cabello</option>
+                <option value="barba">Afeitado y barba</option>
+                <option value="combo">Corte + Barba</option>
+                <option value="tinte">Tinte o diseño</option>
+            </select>
+
+             <div style="text-align: center;">
+  <p><a href="../cita exito..html">Reservar Cita</a></p>
+</div>
+        </form>
+
+        <footer>
+            <p>© 2025 Barbería Charli.</p>
+        </footer>
+    </div>
+</body>
+</html>

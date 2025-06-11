@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galería de Cortes - Barbería Estilo Fino</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #f1f1f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #e0a800;
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: 1.2px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            background: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(224, 168, 0, 0.6);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .caption {
+            padding: 10px;
+            color: #d4af37;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1rem;
+            background-color: #121212;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galería de Cortes - Barber Charli</h1>
+    </header>
+
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="../corte1.jpg" alt="Corte clásico" />
+            <div class="caption">Corte Clásico</div>
+        </div>
+        <div class="gallery-item"><img src="../../../AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/419E4410DA152C74D727270283CB94CE/Imagen de WhatsApp 2025-06-10 a las 18.57.10_ee1429c5.jpg" width="1200" height="1600" alt=""/>
+          <div class="caption">Corte Degradado</div>
+        </div>
+        <div class="gallery-item"><img src="../../../AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/5AA86B4DE7AF02B2DDA5DE2FE8C60F47/Imagen de WhatsApp 2025-06-10 a las 19.11.07_8baa23cb.jpg" width="777" height="1600" alt=""/>
+          <div class="caption">Barba Perfilada</div>
+        </div>
+        <div class="gallery-item"><img src="../../../AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/9BF8D7D48A8543F9D4E60AA9DA5E9EF9/Imagen de WhatsApp 2025-06-10 a las 18.57.10_def17110.jpg" width="1200" height="1600" alt=""/>
+          <div class="caption">Corte Moderno</div>
+        </div>
+        <div class="gallery-item"><img src="../../../AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/0A16C20A58DA7EB8F96F612B8CAFD1AE/Imagen de WhatsApp 2025-06-10 a las 18.57.10_67e8235c.jpg" width="1200" height="1600" alt=""/>
+          <div class="caption">Diseño con Líneas</div>
+        </div>
+        <!-- Añade más cortes aquí -->
+    </section>
+
+    <footer>
+  © 2025 Barber Charli.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</footer>
+</body>
+</html>
